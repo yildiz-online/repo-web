@@ -1,10 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    List of repositories
   </h1>
-  <ul>
-  <li *ngFor="let repo of content | async">{{repo.name}}</li>
-  </ul>
+  <div *ngFor="let repo of content | async" class="repo-block">
+    <p>{{repo.name}}</p>
+    <p>{{repo.description}}</p>
+    <p>{{repo.pushed_at}}</p>
+    <a href='https://sonarcloud.io/dashboard?id=be.yildiz-games%3A{{repo.name}}' target='_blank'> Sonarqube </a>
+  </div>
 </div>
 

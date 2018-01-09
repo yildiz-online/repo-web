@@ -10,7 +10,6 @@ import {Observable} from 'rxjs/Observable';
 })
 export class AppComponent implements OnInit {
 
-  title = 'repos';
   content: Observable<Repo[]>;
 
   constructor(private repoService: RepoService) {
