@@ -4,7 +4,7 @@
     Welcome to {{ title }}!
   </h1>
   <ul>
-  <li *ngFor="let repo of content | async">{{repo}}</li>
+  <li *ngFor="let repo of content | async">{{repo.name}}</li>
   </ul>
 </div>
 

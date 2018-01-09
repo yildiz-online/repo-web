@@ -20,7 +20,7 @@ export class RepoService {
           return data.next ? this.getPage(data.next) : EmptyObservable.create();
         })
         .reduce((acc, data) => {
-          return acc.concat(data);
+          return acc.concat(data.result);
         }, [])
         .subscribe((repo) => {
           observer.next(repo);
