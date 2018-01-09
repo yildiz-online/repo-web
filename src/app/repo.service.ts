@@ -19,8 +19,9 @@ export class RepoService {
         .expand((data, i) => {
           return data.next ? this.getPage(data.next) : EmptyObservable.create();
         })
+        .map(data => data.result)
         .reduce((acc, data) => {
-          return acc.concat(data.result);
+          return acc.concat(data);
         }, [])
         .subscribe((repo) => {
           observer.next(repo);
