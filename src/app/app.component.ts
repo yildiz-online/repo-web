@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.content = Observable.of(this.dummyRepo);
-    // this.content = this.repoService.getAllRepo();
+    //this.content = Observable.of(this.dummyRepo);
+    this.content = this.repoService.getAllRepo();
   }
 }

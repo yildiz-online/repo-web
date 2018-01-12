@@ -4,6 +4,7 @@
     List of repositories
   </h1>
   <div class='container'>
+    <pre *ngIf="!(content | async)">Loading repositories</pre>
     <div class='row card-deck'>
       <div *ngFor="let repo of content | async" class="col-3">
         <div class="card">
