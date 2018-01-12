@@ -3,11 +3,17 @@
   <h1>
     List of repositories
   </h1>
-  <div *ngFor="let repo of content | async" class="repo-block">
-    <p>{{repo.name}}</p>
-    <p>{{repo.description}}</p>
-    <p>{{repo.pushed_at}}</p>
-    <a href='https://sonarcloud.io/dashboard?id=be.yildiz-games%3A{{repo.name}}' target='_blank'> Sonarqube </a>
+  <div class='container'>
+    <div class='row card-deck'>
+      <div *ngFor="let repo of content | async" class="col-3">
+        <div class="card">
+          <p>{{repo.name}}</p>
+          <p>{{repo.description}}</p>
+          <p>Last update: {{repo.pushed_at | date : 'dd/MM/yyyy'}}</p>
+          <a href='https://sonarcloud.io/dashboard?id=be.yildiz-games%3A{{repo.name}}' target='_blank'> Sonarqube </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

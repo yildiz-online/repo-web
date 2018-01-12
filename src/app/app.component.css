@@ -1,5 +1,4 @@
-.repo-block {
-  padding: 5%;
-  border: 1px solid;
-  max-width: 10%;
+div.card {
+  min-height: 200px;
+  margin-bottom: 5%;
 }
