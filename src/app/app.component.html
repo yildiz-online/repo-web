@@ -2,12 +2,19 @@
   <nav class='navbar navbar-default navbar-fixed-top'>
     <div class='container'>
       <div class='navbar-header'>
-        <a class='navbar-brand' href='#'>Repositories</a>
+        <a class='navbar-brand' href='#'>Yildiz-Engine Repositories</a>
       </div>
     </div>
   </nav>
 
   <div class='container'>
+
+    <p class='introduction'>
+      The Yildiz-engine project is a set of sub-project to build games.
+      Among those project are the engines themselve, to coordinates the modules, that offer the functionalities like graphic, audio, physic, network, persistence, scripting... .
+
+    </p>
+
     <pre *ngIf="!(content | async)">Loading repositories</pre>
     <div class='row card-deck no-gutters'>
       <div *ngFor="let repo of content | async" class='col-xl-4'>
