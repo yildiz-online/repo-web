@@ -1,20 +1,39 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    List of repositories
-  </h1>
+<div style="text-align:center" class='common'>
+  <nav class='navbar navbar-default navbar-fixed-top'>
+    <div class='container'>
+      <div class='navbar-header'>
+        <a class='navbar-brand' href='#'>Repositories</a>
+      </div>
+    </div>
+  </nav>
+
   <div class='container'>
     <pre *ngIf="!(content | async)">Loading repositories</pre>
-    <div class='row card-deck'>
-      <div *ngFor="let repo of content | async" class="col-3">
-        <div class="card">
-          <p>{{repo.name}}</p>
-          <p>{{repo.description}}</p>
-          <p>Last update: {{repo.pushed_at | date : 'dd/MM/yyyy'}}</p>
-          <a href='https://sonarcloud.io/dashboard/index/be.yildiz-games:{{repo.name}}' target='_blank'> Sonarqube </a>
+    <div class='row card-deck no-gutters'>
+      <div *ngFor="let repo of content | async" class='col-xl-4'>
+        <div class='card common'>
+          <p class='repo-name'>{{repo.name}}</p>
+          <p class='repo-description'>{{repo.description || "No description found for this project."}}</p>
+          <p class='repo-updated'>Last update: {{repo.pushed_at | date : 'dd/MM/yyyy'}}</p>
+          <a class='repo-bitbucket' href='https://bitbucket.org/yildiz-engine-team/{{repo.name}}'>Bitbucket</a>
+          <a class='repo-sonar' href='https://sonarcloud.io/dashboard/index/be.yildiz-games:{{repo.name}}'><img src='https://sonarcloud.io/api/badges/gate?be.yildiz-games:{{repo.name}}'/></a>
+          <a class='repo-javadoc' href='https://www.javadoc.io/doc/be.yildiz-games/{{repo.name}}'><img src='https://www.javadoc.io/badge/be.yildiz-games/engine-client.svg'/></a>
+          <a class='repo-maven' href='https://mvnrepository.com/artifact/be.yildiz-games/{{repo.name}}'><img src='https://img.shields.io/maven-central/v/be.yildiz-games/engine-client.svg?maxAge=2592000'/></a>
+          <a class='repo-travis' href='https://travis-ci.org/yildiz-online/{{repo.name}}'><img src='https://travis-ci.org/yildiz-online/engine-client.svg?branch=master'/></a>
+          <a class='repo-appveyor' href='https://ci.appveyor.com/project/yildiz-online/{{repo.name}}'><img src='https://ci.appveyor.com/api/projects/status/github/yildiz-online/{{repo.name}}'/></a>
         </div>
       </div>
     </div>
+    <p class='supporter-title'>Build thanks to open-source supporters</p>
+    <img class='supporter-logo' src='assets/atlassian.png' />
+    <img class='supporter-logo' src='assets/jetbrains.png' />
+    <img class='supporter-logo' src='assets/jprofiler.png' />
   </div>
+
+  <footer>
+    <div class='footer-copyright'>
+      &copy;2018 Copyright: Grégory Van den Borre
+    </div>
+  </footer>
 </div>
 
