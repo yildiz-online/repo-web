@@ -1,4 +1,54 @@
-div.card {
-  min-height: 200px;
-  margin-bottom: 5%;
+.common {
+  background-color: rgb(253,253,253);
+  font-family: 'Roboto', sans-serif;
 }
+
+nav.navbar {
+  background-color: #000;
+  margin-bottom: 6%;
+}
+
+nav.navbar a {
+  color: #FFF;
+}
+
+div.card {
+  min-height: 300px;
+  margin-bottom: 8%;
+  border-color: #444;
+}
+
+.repo-name {
+  padding-top: 3%;
+  font-size: x-large;
+}
+
+.repo-description {
+  padding:1%;
+}
+
+.repo-updated {
+
+}
+
+.repo-sonar {
+
+}
+
+.supporter-title {
+  margin-top:5%;
+  font-size: x-large;
+}
+
+.supporter-logo {
+  max-width: 15%;
+}
+
+.footer-copyright {
+  padding-top:3%;
+  padding-bottom: 3%;
+  background-color: #000;
+  margin-top: 5%;
+  color: #FFF;
+}
+
