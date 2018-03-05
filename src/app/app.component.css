@@ -5,11 +5,16 @@
 
 nav.navbar {
   background-color: #000;
-  margin-bottom: 6%;
+  margin-bottom: 3%;
 }
 
 nav.navbar a {
   color: #FFF;
+}
+
+.introduction {
+  font-size: x-large;
+  margin-bottom: 5%;
 }
 
 div.card {
