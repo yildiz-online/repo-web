@@ -4,5 +4,6 @@ pipelines:
   default:
     - step:
         script:
+          - npm install -g yarnpkg
           - yarn install
           - ng build --prod
