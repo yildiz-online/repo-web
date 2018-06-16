@@ -3,15 +3,15 @@ image: node:10.3.0
 pipelines:
   default:
     - step:
-        name: Build the webapp
+        name: Build artifact
         script:
           - npm install -g yarnpkg
           - npm install -g @angular/cli
           - yarn install
           - ng build --prod
-          - tar cvf repo-web.tar dist/
+          - tar zcvf repo-web_${BITBUCKET_BUILD_NUMBER}.tar.gz dist/
     - step:
         name: Deploy to server
         deployment: production
         script:
-          - curl -X POST "https://${BB_AUTH_STRING}@api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"repo-web.tar"
+          - curl -X POST "https://${BB_AUTH_STRING}@api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"repo-web_${BITBUCKET_BUILD_NUMBER}.tar.gz"
