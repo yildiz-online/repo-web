@@ -23,7 +23,8 @@
           <p class='repo-description'>{{repo.description || "No description found for this project."}}</p>
           <p class='repo-updated'>Last update: {{repo.pushed_at | date : 'dd/MM/yyyy'}}</p>
           <a class='repo-bitbucket' href='https://bitbucket.org/yildiz-engine-team/{{repo.name}}'>Bitbucket</a>
-          <a *ngIf="!(repo.name.includes(docker))" class='repo-sonar' href='https://sonarcloud.io/dashboard/index/be.yildiz-games:{{repo.name}}' target='blank'><img src='https://sonarcloud.io/api/project_badges/measure?project=be.yildiz-games%3A{{repo.name}}&metric=alert_status'/></a>
+          <p>{{repo.dockerImage}}</p>
+          <a *ngIf="!repo.dockerImage" class='repo-sonar' href='https://sonarcloud.io/dashboard/index/be.yildiz-games:{{repo.name}}' target='blank'><img src='https://sonarcloud.io/api/project_badges/measure?project=be.yildiz-games%3A{{repo.name}}&metric=alert_status'/></a>
           <a class='repo-javadoc' href='https://www.javadoc.io/doc/be.yildiz-games/{{repo.name}}' target='blank'><img src='https://javadoc.io/badge/be.yildiz-games/{{repo.name}}.svg'/></a>
           <a class='repo-maven' href='https://mvnrepository.com/artifact/be.yildiz-games/{{repo.name}}' target='blank'><img src='https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/be/yildiz-games/{{repo.name}}/maven-metadata.xml.svg'/></a>
           <a class='repo-travis' href='https://travis-ci.org/yildiz-online/{{repo.name}}' target='blank'><img src='https://travis-ci.org/yildiz-online/{{repo.name}}.svg?branch=master'/></a>
