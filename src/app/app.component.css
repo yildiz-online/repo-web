@@ -47,6 +47,7 @@ div.card {
 
 .supporter-logo {
   max-width: 15%;
+  max-height: 50px;
 }
 
 .footer-copyright {
