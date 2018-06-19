@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Repo} from './Repo';
 import {RepoService} from './repo.service';
-import {Observable} from 'rxjs/Observable';
+import {Observable, Observer} from 'rxjs';
 import 'rxjs/add/observable/of';
-import {Observer} from 'rxjs/Observer';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +27,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.content = Observable.of(this.dummyRepo);
+    this.content = this.repoService.getAllRepo();
   }
 }
