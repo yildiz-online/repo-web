@@ -26,7 +26,8 @@
           <a *ngIf="!repo.name.includes('docker')" class='repo-sonar' href='https://sonarcloud.io/dashboard/index/be.yildiz-games:{{repo.name}}' target='blank'><img src='https://sonarcloud.io/api/project_badges/measure?project=be.yildiz-games%3A{{repo.name}}&metric=alert_status'/></a>
           <a *ngIf="!repo.name.includes('docker-') && !repo.name.includes('parent') && !repo.name.includes('component-')" class='repo-javadoc' href='https://www.javadoc.io/doc/be.yildiz-games/{{repo.name}}' target='blank'><img src='https://javadoc.io/badge/be.yildiz-games/{{repo.name}}.svg'/></a>
           <a *ngIf="!repo.name.includes('docker')" class='repo-maven' href='https://mvnrepository.com/artifact/be.yildiz-games/{{repo.name}}' target='blank'><img src='https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/be/yildiz-games/{{repo.name}}/maven-metadata.xml.svg'/></a>
-          <a *ngIf="!repo.name.includes('component-')" class='repo-travis' href='https://travis-ci.org/yildiz-online/{{repo.name}}' target='blank'><img src='https://travis-ci.org/yildiz-online/{{repo.name}}.svg?branch=master'/></a>
+          <a *ngIf="!repo.name.includes('docker-')" class='repo-travis' href='https://bitbucket.org/yildiz-engine-team/{{repo.name}}/addon/pipelines/home' target='blank'><img src='https://img.shields.io/bitbucket/pipelines/yildiz-engine-team/{{repo.name}}.svg'/></a>
+          <a *ngIf="repo.name.includes('docker-')" class='repo-travis' href='https://travis-ci.org/yildiz-online/{{repo.name}}' target='blank'><img src='https://travis-ci.org/yildiz-online/{{repo.name}}.svg?branch=master'/></a>
         </div>
       </div>
     <p class='supporter-title'>Build thanks to open-source supporters</p>
@@ -37,7 +38,7 @@
 
   <footer>
     <div class='footer-copyright'>
-      &copy;2018 Copyright: Grégory Van den Borre
+      &copy;2018 Copyright: Gregory Van den Borre
     </div>
   </footer>
 </div>
