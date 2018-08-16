@@ -27,7 +27,6 @@
           <a *ngIf="!repo.name.includes('docker-') && !repo.name.includes('parent') && !repo.name.includes('component-')" class='repo-javadoc' href='https://www.javadoc.io/doc/be.yildiz-games/{{repo.name}}' target='blank'><img src='https://javadoc.io/badge/be.yildiz-games/{{repo.name}}.svg'/></a>
           <a *ngIf="!repo.name.includes('docker')" class='repo-maven' href='https://mvnrepository.com/artifact/be.yildiz-games/{{repo.name}}' target='blank'><img src='https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/be/yildiz-games/{{repo.name}}/maven-metadata.xml.svg'/></a>
           <a *ngIf="!repo.name.includes('component-')" class='repo-travis' href='https://travis-ci.org/yildiz-online/{{repo.name}}' target='blank'><img src='https://travis-ci.org/yildiz-online/{{repo.name}}.svg?branch=master'/></a>
-          <a *ngIf="!repo.name.includes('docker') && !repo.name.includes('component-')" class='repo-appveyor' href='https://ci.appveyor.com/project/yildiz-online/{{repo.name}}' target='blank'><img src='https://ci.appveyor.com/api/projects/status/github/yildiz-online/{{repo.name}}'/></a>
         </div>
       </div>
     <p class='supporter-title'>Build thanks to open-source supporters</p>
@@ -38,7 +37,7 @@
 
   <footer>
     <div class='footer-copyright'>
-      &copy;2018 Copyright: GrÃ©gory Van den Borre
+      &copy;2018 Copyright: Grégory Van den Borre
     </div>
   </footer>
 </div>
