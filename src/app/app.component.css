@@ -45,6 +45,10 @@ div.card {
   font-size: x-large;
 }
 
+.bitbucket {
+  max-width: 10%;
+}
+
 .supporter-logo {
   max-width: 15%;
   max-height: 50px;
