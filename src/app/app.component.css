@@ -13,7 +13,11 @@ nav.navbar {
 }
 
 nav.navbar a {
-  color: #FFF;
+  color: rgb(110,110,100);
+}
+
+nav.navbar a:hover {
+  color: #F00;
 }
 
 .introduction {
