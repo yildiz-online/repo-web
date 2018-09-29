@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule, Routes } from '@angular/router';
 
 import {AppComponent} from './app.component';
 import {RepositoriesService} from './repositories/repositories.service';
@@ -8,6 +9,12 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {SupportersComponent} from "./supporters/supporters.component";
 import {RepositoriesComponent} from "./repositories/repositories.component";
 import {CarouselComponent} from "./carousel/carousel.component";
+
+const appRoutes: Routes = [
+  { path: '', component: CarouselComponent },
+  { path: 'carousel', component: CarouselComponent },
+  { path: 'repositories', component: RepositoriesComponent }
+];
 
 @NgModule({
   declarations: [
@@ -19,7 +26,8 @@ import {CarouselComponent} from "./carousel/carousel.component";
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [RepositoriesService, HttpClient],
   bootstrap: [AppComponent]
