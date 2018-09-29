@@ -3,24 +3,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
-nav.navbar {
-  background-color: #000;
-  margin-bottom: 3%;
-}
-
-nav.navbar a {
-  color: rgb(110,110,100);
-}
-
-nav.navbar a:hover {
-  color: #F00;
-}
-
 .introduction {
   font-size: x-large;
   margin-bottom: 5%;
 }
-
 
 .footer-copyright {
   padding-top:3%;

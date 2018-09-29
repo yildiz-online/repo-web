@@ -9,6 +9,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {SupportersComponent} from "./supporters/supporters.component";
 import {RepositoriesComponent} from "./repositories/repositories.component";
 import {CarouselComponent} from "./carousel/carousel.component";
+import {NavigationComponent} from "./navigation/navigation.component";
 
 const appRoutes: Routes = [
   { path: '', component: CarouselComponent },
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     AppComponent,
     RepositoriesComponent,
     SupportersComponent,
-    CarouselComponent
+    CarouselComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
