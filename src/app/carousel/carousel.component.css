@@ -1,13 +1,13 @@
 #carouselMain {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .carousel-caption {
-  top: 630px;
+  top: 400px;
   bottom: auto;
 }
 
 .carousel-indicators {
-  top: 600px;
+  top: 420px;
 }
 
