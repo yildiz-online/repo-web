@@ -13,7 +13,7 @@ import {NavigationComponent} from "./navigation/navigation.component";
 
 const appRoutes: Routes = [
   { path: '', component: CarouselComponent },
-  { path: 'carousel', component: CarouselComponent },
+  { path: 'home', component: CarouselComponent },
   { path: 'repositories', component: RepositoriesComponent }
 ];
 

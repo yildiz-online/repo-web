@@ -1,5 +1,5 @@
 <pre *ngIf="!(content | async)">Loading repositories</pre>
-<div class='row card-deck no-gutters'>
+<div class='row card-deck no-gutters repositories'>
   <div *ngFor="let repo of content | async" class='col-xl-4'>
     <div class='card common'>
       <p class='repo-name'>{{repo.name}}</p>

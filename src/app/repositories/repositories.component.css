@@ -1,3 +1,7 @@
+div.repositories {
+  padding-top: 55px;
+}
+
 div.card {
   min-height: 300px;
   margin-bottom: 8%;
