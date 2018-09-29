@@ -1,0 +1,13 @@
+#carouselMain {
+  padding-top: 50px;
+}
+
+.carousel-caption {
+  top: 630px;
+  bottom: auto;
+}
+
+.carousel-indicators {
+  top: 600px;
+}
+

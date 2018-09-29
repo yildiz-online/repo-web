@@ -1,7 +1,3 @@
-.introduction {
-  padding-top: 65px;
-}
-
 .common {
   background-color: rgb(253,253,253);
   font-family: 'Roboto', sans-serif;
@@ -25,42 +21,6 @@ nav.navbar a:hover {
   margin-bottom: 5%;
 }
 
-div.card {
-  min-height: 300px;
-  margin-bottom: 8%;
-  border-color: #444;
-}
-
-.repo-name {
-  padding-top: 3%;
-  font-size: x-large;
-}
-
-.repo-description {
-  padding:1%;
-}
-
-.repo-updated {
-
-}
-
-.repo-sonar {
-
-}
-
-.supporter-title {
-  margin-top:5%;
-  font-size: x-large;
-}
-
-.bitbucket {
-  max-width: 25%;
-}
-
-.supporter-logo {
-  max-width: 15%;
-  max-height: 50px;
-}
 
 .footer-copyright {
   padding-top:3%;

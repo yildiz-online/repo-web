@@ -1,0 +1,27 @@
+div.card {
+  min-height: 300px;
+  margin-bottom: 8%;
+  border-color: #444;
+}
+
+.repo-name {
+  padding-top: 3%;
+  font-size: x-large;
+}
+
+.repo-description {
+  padding:1%;
+}
+
+.repo-updated {
+
+}
+
+.repo-sonar {
+
+}
+
+.bitbucket {
+  max-width: 25%;
+}
+

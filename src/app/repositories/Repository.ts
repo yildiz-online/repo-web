@@ -1,4 +1,4 @@
-export class Repo {
+export class Repository {
 
   name: String;
   description: String;

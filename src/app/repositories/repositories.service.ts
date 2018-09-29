@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Repo} from './Repo';
+import {Repository} from './Repository';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/expand';
@@ -8,12 +8,12 @@ import 'rxjs/add/operator/reduce';
 import {EmptyObservable} from 'rxjs/observable/EmptyObservable';
 
 @Injectable()
-export class RepoService {
+export class RepositoriesService {
 
   constructor(private httpClient: HttpClient) {
   }
 
-  public getAllRepo(): Observable<Repo[]> {
+  public getAllRepo(): Observable<Repository[]> {
     return Observable.create(observer => {
       this.getPage('https://api.github.com/users/yildiz-online/repos?page=1')
         .expand((data, i) => {
@@ -29,8 +29,8 @@ export class RepoService {
     });
   }
 
-  private getPage(url: string): Observable<{ next: string, result: Repo[] }> {
-    return this.httpClient.get<Repo[]>(url, {observe: 'response'})
+  private getPage(url: string): Observable<{ next: string, result: Repository[] }> {
+    return this.httpClient.get<Repository[]>(url, {observe: 'response'})
       .map(response => {
         const link = response.headers.get('Link');
         return {
