@@ -8,9 +8,10 @@
   padding: 0;
 }
 
-.introduction {
+p.introduction {
   font-size: x-large;
-  margin-bottom: 5%;
+  padding-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .footer-copyright {
