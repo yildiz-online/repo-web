@@ -8,9 +8,9 @@ pipelines:
           - npm install -g yarnpkg
           - npm install -g @angular/cli
           - yarn install
-          - ng build --prod --output-path=repo-web_${BITBUCKET_COMMIT}_${BITBUCKET_BUILD_NUMBER}
-          - tar zcvf repo-web_${BITBUCKET_COMMIT}_${BITBUCKET_BUILD_NUMBER}.tar.gz repo-web_${BITBUCKET_COMMIT}_${BITBUCKET_BUILD_NUMBER}/
-          - curl -X POST "https://${BB_AUTH_STRING}@api.bitbucket.org/2.0/repositories/yildiz-engine-team/repo-web/downloads" --form files=@"repo-web_${BITBUCKET_COMMIT}_${BITBUCKET_BUILD_NUMBER}.tar.gz"
+          - ng build --prod --output-path=repo-web_${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}
+          - tar zcvf repo-web_${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}.tar.gz repo-web_${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}/
+          - curl -X POST "https://${BB_AUTH_STRING}@api.bitbucket.org/2.0/repositories/yildiz-engine-team/repo-web/downloads" --form files=@"repo-web_${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}.tar.gz"
           - curl GET "http://yildiz-games.be:10103?commit=${BITBUCKET_COMMIT}&build=${BITBUCKET_BUILD_NUMBER}"
           
             
