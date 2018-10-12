@@ -16,7 +16,7 @@ const appRoutes: Routes = [
   { path: '', component: CarouselComponent },
   { path: 'home', component: CarouselComponent },
   { path: 'repositories', component: RepositoriesComponent },
-  { path: 'getting-started', component: GettingStartedComponent}
+  { path: 'starting', component: GettingStartedComponent}
 ];
 
 @NgModule({
