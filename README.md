@@ -1,6 +1,7 @@
 # RepoWeb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
+This project is the main portal for the Yildiz-Engine project.
+It can be access online at 'https://engine.yildiz-games.be' 
 
 ## Development server
 
