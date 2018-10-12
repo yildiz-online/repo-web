@@ -10,7 +10,9 @@ import {SupportersComponent} from "./supporters/supporters.component";
 import {RepositoriesComponent} from "./repositories/repositories.component";
 import {CarouselComponent} from "./carousel/carousel.component";
 import {NavigationComponent} from "./navigation/navigation.component";
-import {TutorialComponent} from "./tutorial/tutorial";
+import {TutorialComponent} from "./tutorial/tutorial.component";
+import {VersionComponent} from "./version/version.component";
+import {VersionService} from "./version/version.service";
 
 const appRoutes: Routes = [
   { path: '', component: CarouselComponent },
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
     SupportersComponent,
     CarouselComponent,
     NavigationComponent,
-    TutorialComponent
+    TutorialComponent,
+    VersionComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ const appRoutes: Routes = [
     NgbModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [RepositoriesService, HttpClient],
+  providers: [RepositoriesService, VersionService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
