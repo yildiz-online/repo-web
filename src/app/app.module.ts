@@ -10,13 +10,13 @@ import {SupportersComponent} from "./supporters/supporters.component";
 import {RepositoriesComponent} from "./repositories/repositories.component";
 import {CarouselComponent} from "./carousel/carousel.component";
 import {NavigationComponent} from "./navigation/navigation.component";
-import {GettingStartedComponent} from "./getting-started/getting-started";
+import {TutorialComponent} from "./tutorial/tutorial";
 
 const appRoutes: Routes = [
   { path: '', component: CarouselComponent },
   { path: 'home', component: CarouselComponent },
   { path: 'repositories', component: RepositoriesComponent },
-  { path: 'starting', component: GettingStartedComponent}
+  { path: 'tutorial', component: TutorialComponent}
 ];
 
 @NgModule({
@@ -26,7 +26,7 @@ const appRoutes: Routes = [
     SupportersComponent,
     CarouselComponent,
     NavigationComponent,
-    GettingStartedComponent
+    TutorialComponent
   ],
   imports: [
     BrowserModule,
