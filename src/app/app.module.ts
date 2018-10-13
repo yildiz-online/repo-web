@@ -6,19 +6,21 @@ import { RouterModule, Routes } from '@angular/router';
 import {AppComponent} from './app.component';
 import {RepositoriesService} from './repositories/repositories.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {SupportersComponent} from "./supporters/supporters.component";
-import {RepositoriesComponent} from "./repositories/repositories.component";
+import {SupportersComponent} from './supporters/supporters.component';
+import {RepositoriesComponent} from './repositories/repositories.component';
 import {CarouselComponent} from "./carousel/carousel.component";
 import {NavigationComponent} from "./navigation/navigation.component";
 import {TutorialComponent} from "./tutorial/tutorial.component";
 import {VersionComponent} from "./version/version.component";
-import {VersionService} from "./version/version.service";
+import {VersionService} from './version/version.service';
+import {PageNotFoundComponent} from './pageNotFound/pageNotFound.component';
 
 const appRoutes: Routes = [
-  { path: '', component: CarouselComponent },
-  { path: 'home', component: CarouselComponent },
+  { path: '',             redirectTo: 'home', pathMatch : 'full' },
+  { path: 'home',         component: CarouselComponent },
   { path: 'repositories', component: RepositoriesComponent },
-  { path: 'tutorial', component: TutorialComponent}
+  { path: 'tutorial',     component: TutorialComponent },
+  { path: '**',           component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
     CarouselComponent,
     NavigationComponent,
     TutorialComponent,
-    VersionComponent
+    VersionComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
