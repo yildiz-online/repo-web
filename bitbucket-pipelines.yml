@@ -5,7 +5,6 @@ pipelines:
     - step:
         name: Build artifact
         script:
-          - yarn install
           - ng build --prod --output-path=repo-web_${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}
           - tar zcvf repo-web_${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}.tar.gz repo-web_${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}/
           - curl -X POST "https://${BB_AUTH_STRING}@api.bitbucket.org/2.0/repositories/yildiz-engine-team/repo-web/downloads" --form files=@"repo-web_${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}.tar.gz"
