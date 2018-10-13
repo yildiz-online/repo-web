@@ -9,13 +9,16 @@ import {Version} from "./Version";
 })
 export class VersionComponent implements OnInit {
 
-   version : Version;
+   version : Version = new Version("1", "None");
 
-  constructor(private versionService : VersionService) {}
+  constructor(private versionService : VersionService) {
+  }
 
   ngOnInit(): void {
     this.versionService.getVersion().subscribe(data => {
-      this.version = data;
+      if(data) {
+        this.version = data;
+      }
     });
   }
 }
