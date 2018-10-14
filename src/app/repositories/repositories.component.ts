@@ -3,6 +3,7 @@ import {Repository} from './Repository';
 import {RepositoriesService} from './repositories.service';
 import {Observable} from 'rxjs';
 import 'rxjs/add/observable/of';
+import {Meta} from "@angular/platform-browser";
 
 @Component({
   selector: 'repositories',
@@ -13,7 +14,9 @@ export class RepositoriesComponent implements OnInit {
 
   content: Observable<Repository[]>;
 
-  constructor(private repoService: RepositoriesService) {}
+  constructor(private repoService: RepositoriesService, private meta: Meta) {
+    this.meta.updateTag({ name: 'description', content: 'The list of all the open-source repositories for the game engine Yildiz-Engine'})
+  }
 
   ngOnInit(): void {
     this.content = this.repoService.getAllRepo();
