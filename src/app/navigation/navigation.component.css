@@ -5,6 +5,10 @@ nav.navbar {
   padding-bottom: 0;
 }
 
+.tooltip-inner {
+  background-color: #000;
+}
+
 a.navbar-brand {
   color: white;
 }
@@ -23,6 +27,11 @@ a.nav-link:hover {
 
 a.nav-link.active {
   background: #F00;
+}
+
+img.logo {
+  width: 60px;
+  height: 60px;
 }
 
 img.icon {
