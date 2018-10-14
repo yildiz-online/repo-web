@@ -5,7 +5,7 @@ pipelines:
     - step:
         name: Build artifact
         script:
-          - ng build --base-href /yildiz-engine --prod --output-path=repo-web_${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}
+          - ng build --prod --output-path=repo-web_${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}
           - tar zcvf repo-web_${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}.tar.gz repo-web_${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}/
           - curl -X POST "https://${BB_AUTH_STRING}@api.bitbucket.org/2.0/repositories/yildiz-engine-team/repo-web/downloads" --form files=@"repo-web_${BITBUCKET_BUILD_NUMBER}_${BITBUCKET_COMMIT}.tar.gz"
           - curl GET "http://yildiz-games.be:10103?commit=${BITBUCKET_COMMIT}&build=${BITBUCKET_BUILD_NUMBER}"
