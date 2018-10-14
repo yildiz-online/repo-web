@@ -14,6 +14,7 @@ import {TutorialComponent} from "./tutorial/tutorial.component";
 import {VersionComponent} from "./version/version.component";
 import {VersionService} from './version/version.service';
 import {PageNotFoundComponent} from './pageNotFound/pageNotFound.component';
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 const appRoutes: Routes = [
   { path: '',             redirectTo: 'home', pathMatch : 'full' },
@@ -40,7 +41,7 @@ const appRoutes: Routes = [
     NgbModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [RepositoriesService, VersionService, HttpClient],
+  providers: [RepositoriesService, VersionService, HttpClient, {provide: HashLocationStrategy, useClass:LocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
