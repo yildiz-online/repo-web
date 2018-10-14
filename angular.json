@@ -20,7 +20,8 @@
               "src/assets",
               "src/favicon.ico",
               "src/css",
-              "src/js"
+              "src/js",
+              "src/robot.txt"
             ],
             "styles": [],
             "scripts": []
