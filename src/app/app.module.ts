@@ -1,7 +1,11 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+import localeFrExtra from '@angular/common/locales/extra/fr';
+
 
 import {AppComponent} from './app.component';
 import {RepositoriesService} from './repositories/repositories.service';
@@ -14,6 +18,8 @@ import {TutorialComponent} from "./tutorial/tutorial.component";
 import {VersionComponent} from "./version/version.component";
 import {VersionService} from './version/version.service';
 import {PageNotFoundComponent} from './pageNotFound/pageNotFound.component';
+
+registerLocaleData(localeFr, 'fr', localeFrExtra);
 
 const appRoutes: Routes = [
   { path: '',             redirectTo: 'home', pathMatch : 'full' },
@@ -40,7 +46,12 @@ const appRoutes: Routes = [
     NgbModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [RepositoriesService, VersionService, HttpClient],
+  providers: [
+    RepositoriesService,
+    VersionService,
+    HttpClient,
+    { provide: LOCALE_ID, useValue: 'fr' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
