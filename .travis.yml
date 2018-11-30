@@ -1,0 +1,18 @@
+sudo: required
+
+language: generic
+
+git:
+  depth: false
+
+dist:
+  xenial
+
+services:
+  - docker
+
+before_install:
+  - docker pull moussavdb/build-node
+
+script:
+  - ng build --prod
