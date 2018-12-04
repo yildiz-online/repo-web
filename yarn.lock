@@ -187,10 +187,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/platform-browser@7.0.3":
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-7.0.3.tgz#9b02347a76db5a9ad42c2b9beaff078060168e39"
-  integrity sha512-OKDGce2dYw9Fw8agpcSNJA+ecMMnMQCi9xoPHNIp1pYdvte7mUXKUvUzR7chqQ7b83d7SzVeEhqAZYa4BUwFRA==
+"@angular/platform-browser@7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-7.1.1.tgz#a6bd408f656dc43ee5a2d8af3dfaa786c7c1dfca"
+  integrity sha512-I6OPjecynGJSbPtzu0gvEgSmIR6X6/xEAhg4L9PycW1ryjzptTC9klWRTWIqsIBqMxhVnY44uKLeRNrDwMOwyA==
   dependencies:
     tslib "^1.9.0"
 
