@@ -21,12 +21,20 @@ export class RepositoriesService {
         })
         .map(data => data.result)
         .reduce((acc, data) => {
-          return acc.concat(data);
+          return acc.concat(data.filter(repo => this.filterRepos(repo)));
         }, [])
         .subscribe((repo) => {
           observer.next(repo);
         });
     });
+  }
+
+  private filterRepos(repo : Repository) : Boolean {
+      return !repo.name.startsWith("test-")
+        && ! repo.name.startsWith("module-entity-modular")
+        && ! repo.name.startsWith("make-release")
+        && ! repo.name.startsWith("webapp")
+        && ! repo.name.startsWith("repo-web");
   }
 
   private getPage(url: string): Observable<{ next: string, result: Repository[] }> {
