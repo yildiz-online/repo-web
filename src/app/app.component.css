@@ -1,5 +1,9 @@
+body {
+  background-color: rgb(10,10,10);
+}
+
 .router-wrapper {
-  padding-top: 40px;
+  padding-top: 80px;
 }
 
 .common {
