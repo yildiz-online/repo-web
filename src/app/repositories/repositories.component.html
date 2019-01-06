@@ -1,7 +1,7 @@
 <pre *ngIf="!(content | async)">Loading repositories</pre>
 <div class='row card-deck no-gutters repositories'>
   <div *ngFor="let repo of content | async" class='col-xl-3'>
-    <div *ngIf="repositoryPresentation.showRepo(repo)" class='card common'>
+    <div class='card common'>
       <p class='repo-name'>{{repo.name}}</p>
       <p class='repo-description'>{{repo.description || "No description found for this project."}}</p>
       <p class='repo-updated'>Last update: {{repo.pushed_at | date : 'dd/MM/yyyy'}}</p>
