@@ -44,7 +44,7 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     NgbModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {useHash: true})
   ],
   providers: [
     RepositoriesService,
