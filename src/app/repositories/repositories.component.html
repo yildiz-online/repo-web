@@ -1,4 +1,4 @@
-<pre *ngIf="!(content | async)">Loading repositories</pre>
+<pre *ngIf="!(content | async)"><p>Loading repositories</p></pre>
 <div class='row card-deck no-gutters repositories'>
   <div *ngFor="let repo of content | async" class='col-xl-3'>
     <div class='card common'>
@@ -9,7 +9,8 @@
       <a *ngIf="!repo.name.includes('docker-') && !repo.name.includes('parent') && !repo.name.includes('component-')" class='repo-sonar' aria-label='Link to the Sonarqube quality code analysis result' href='https://sonarcloud.io/dashboard/index/be.yildiz-games:{{repo.name}}' target='blank'><img src='https://sonarcloud.io/api/project_badges/measure?project=be.yildiz-games%3A{{repo.name}}&metric=alert_status' alt='Sonarqube quality check result'/></a>
       <a *ngIf="!repo.name.includes('docker-') && !repo.name.includes('parent') && !repo.name.includes('component-')" class='repo-javadoc' aria-label='Link to the code Javadoc documentation' href='https://www.javadoc.io/doc/be.yildiz-games/{{repo.name}}' target='blank'><img src='https://javadoc.io/badge/be.yildiz-games/{{repo.name}}.svg' alt='Source code javadoc'/></a>
       <a *ngIf="!repo.name.includes('docker-')" class='repo-maven' aria-label='Link to the maven last release artifact' href='https://mvnrepository.com/artifact/be.yildiz-games/{{repo.name}}' target='blank'><img src='https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/be/yildiz-games/{{repo.name}}/maven-metadata.xml.svg' alt='Maven last release artifact'/></a>
-      <a class='repo-travis' aria-label='Link to the continuous integration build result' href='https://travis-ci.org/yildiz-online/{{repo.name}}' target='blank'><img src='https://travis-ci.org/yildiz-online/{{repo.name}}.svg?branch=develop' alt='CI build result'/></a>
+      <a *ngIf="!repo.name.includes('docker-') && !repo.name.includes('test-')" class='repo-travis' aria-label='Link to the continuous integration build result' href='https://travis-ci.org/yildiz-online/{{repo.name}}' target='blank'><img src='https://travis-ci.org/yildiz-online/{{repo.name}}.svg?branch=develop' alt='CI build result'/></a>
+      <a *ngIf="repo.name.includes('docker-')" class='repo-travis' aria-label='Link to the continuous integration build result' href='https://travis-ci.org/yildiz-online/{{repo.name}}' target='blank'><img src='https://travis-ci.org/yildiz-online/{{repo.name}}.svg?branch=master' alt='CI build result'/></a>
       <a *ngIf="!repo.name.includes('docker-')" href="https://snyk.io/test/github/yildiz-online/{{repo.name}}?targetFile=pom.xml"><img src="https://snyk.io/test/github/yildiz-online/{{repo.name}}/badge.svg?targetFile=pom.xml" alt="Known Vulnerabilities" style="max-width:100%;"></a>
     </div>
   </div>
