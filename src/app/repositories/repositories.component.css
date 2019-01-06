@@ -1,11 +1,12 @@
 div.repositories {
-  padding-top: 15px;
+  padding-top: 55px;
 }
 
 div.card {
   min-height: 300px;
   margin-bottom: 8%;
   border-color: #444;
+  background-color: rgb(10,10,10);
 }
 
 .repo-name {
