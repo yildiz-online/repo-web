@@ -17,7 +17,7 @@
     "@angular/compiler": "7.2.5",
     "@angular/core": "7.2.5",
     "@angular/forms": "7.2.5",
-    "@angular/http": "7.2.13",
+    "@angular/http": "7.2.14",
     "@angular/platform-browser": "7.1.4",
     "@angular/platform-browser-dynamic": "7.2.14",
     "@angular/router": "7.1.4",
