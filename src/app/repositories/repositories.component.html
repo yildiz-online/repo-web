@@ -5,6 +5,7 @@
       <p class='repo-name'>{{repo.name}}</p>
       <p class='repo-description'>{{repo.description || "No description available for this repository."}}</p>
       <p class='repo-updated'>Last update: {{repo.pushed_at | date : 'dd/MM/yyyy'}}</p>
+      <p class='repo-updated'>Open issues: {{repo.open_issues_count}}</p>
       <a class='repo-bitbucket' aria-label='Link to the GIT repository' href='https://github.com/yildiz-online/{{repo.name}}'><img class='bitbucket' src='assets/Git-Logo-White.png' alt='Source code GIT repository'/></a>
       <script type='text/javascript' src='https://www.openhub.net/p/yildiz-engine_{{repo.name}}/widgets/project_thin_badge?format=js'></script>
       <a *ngIf="repositoryPresentation.showSonar(repo)" class='repo-sonar' aria-label='Link to the Sonarqube quality code analysis result' href='https://sonarcloud.io/dashboard/index/be.yildiz-games:{{repo.name}}' target='blank'><img src='https://sonarcloud.io/api/project_badges/measure?project=be.yildiz-games%3A{{repo.name}}&metric=alert_status' alt='Sonarqube quality check result'/></a>
