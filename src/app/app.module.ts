@@ -9,6 +9,7 @@ import localeFrExtra from '@angular/common/locales/extra/fr';
 
 import {AppComponent} from './app.component';
 import {RepositoriesService} from './repositories/repositories.service';
+import {CommitsService} from './repositories/commits.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {SupportersComponent} from './supporters/supporters.component';
 import {RepositoriesComponent} from './repositories/repositories.component';
@@ -48,6 +49,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     RepositoriesService,
+    CommitsService,
     VersionService,
     HttpClient,
     { provide: LOCALE_ID, useValue: 'fr' }
