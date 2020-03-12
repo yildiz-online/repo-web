@@ -19,7 +19,7 @@
     "@angular/forms": "9.0.2",
     "@angular/http": "7.2.16",
     "@angular/platform-browser": "9.0.2",
-    "@angular/platform-browser-dynamic": "9.0.2",
+    "@angular/platform-browser-dynamic": "9.0.6",
     "@angular/router": "9.0.2",
     "@ng-bootstrap/ng-bootstrap": "5.3.0",
     "core-js": "3.6.4",
