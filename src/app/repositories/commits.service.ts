@@ -5,7 +5,6 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/expand';
 import 'rxjs/add/operator/reduce';
-import {EmptyObservable} from 'rxjs/observable/EmptyObservable';
 
 @Injectable()
 export class CommitsService {
