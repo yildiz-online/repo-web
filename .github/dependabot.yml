@@ -3,21 +3,14 @@ updates:
 - package-ecosystem: npm
   directory: "/"
   schedule:
-    interval: daily
+    interval: "weekly"
+    day: "sunday"
     time: "04:00"
     timezone: Europe/Brussels
-  open-pull-requests-limit: 99
   versioning-strategy: increase
-  ignore:
-  - dependency-name: "@angular/cli"
-    versions:
-    - 11.1.2
-    - 11.1.4
-    - 11.2.9
-  - dependency-name: "@angular-devkit/build-angular"
-    versions:
-    - 0.1101.2
-    - 0.1102.10
-  - dependency-name: "@types/node"
-    versions:
-    - 14.14.39
+  open-pull-requests-limit: 99
+  assignees:
+    - "yildiz-online"
+  commit-message:
+    prefix: "[UPGRADE]"
+    include: "scope"
