@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Repository} from './Repository';
-import {of, Observable} from 'rxjs';
+import {Observable, map} from 'rxjs';
 
 @Injectable()
 export class RepositoriesService {
@@ -10,20 +10,11 @@ export class RepositoriesService {
   }
 
   public getAllRepo(): Observable<Repository[]> {
-      return of([]);
-    /*return Observable.create(observer => {
-      this.getPage('https://api.github.com/users/yildiz-online/repos?page=1')
-        .expand((data, i) => {
-          return data.next ? this.getPage(data.next) : EmptyObservable.create();
-        })
-        .map(data => data.result)
-        .reduce((acc, data) => {
-          return acc.concat(data.filter(repo => this.filterRepos(repo)));
-        }, [])
-        .subscribe((repo) => {
-          observer.next(repo);
-        });
-    });*/
+        return this.getPage('https://api.github.com/users/yildiz-online/repos?page=1')
+            .pipe(
+                map(page => page.result),
+                map(repos => repos.filter(repo => this.filterRepos(repo))),
+            );
   }
 
   private filterRepos(repo : Repository) : Boolean {
@@ -34,16 +25,17 @@ export class RepositoriesService {
         && ! repo.name.startsWith("repo-web");
   }
 
-  /*private getPage(url: string): Observable<{ next: string, result: Repository[] }> {
+  private getPage(url: string): Observable<{ next: string, result: Repository[] }> {
     return this.httpClient.get<Repository[]>(url, {observe: 'response'})
-      .map(response => {
+        .pipe(
+      map(response => {
         const link = response.headers.get('Link');
         return {
           next: this.getNextUrl(link),
           result: response.body
         };
-      });
-  }*/
+      }));
+  }
 
   private getNextUrl(linkHeader: string): string {
     if (linkHeader.indexOf('next') === -1) {

@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {RepositoriesService} from './repositories.service';
 import {CommitsService} from './commits.service';
 import {Observable} from 'rxjs';
-import 'rxjs/add/observable/of';
 import {Meta} from "@angular/platform-browser";
 import {Repository} from "./Repository";
 import {RepositoryPresentation} from "./RepositoryPresentation";
