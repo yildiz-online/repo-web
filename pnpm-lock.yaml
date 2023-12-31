@@ -36,8 +36,8 @@ dependencies:
     specifier: 8.0.0
     version: 8.0.0(@angular/common@17.0.4)(@angular/core@17.0.4)(@ngx-translate/core@15.0.0)(rxjs@7.8.1)
   core-js:
-    specifier: 3.33.3
-    version: 3.33.3
+    specifier: 3.35.0
+    version: 3.35.0
   rxjs:
     specifier: 7.8.1
     version: 7.8.1
@@ -3360,8 +3360,8 @@ packages:
       browserslist: 4.22.2
     dev: true
 
-  /core-js@3.33.3:
-    resolution: {integrity: sha512-lo0kOocUlLKmm6kv/FswQL8zbkH7mVsLJ/FULClOhv8WRVmKLVcs6XPNQAzstfeJTCHMyButEwG+z1kHxHoDZw==}
+  /core-js@3.35.0:
+    resolution: {integrity: sha512-ntakECeqg81KqMueeGJ79Q5ZgQNR+6eaE8sxGCx62zMbAIj65q+uYvatToew3m6eAGdU4gNZwpZ34NMe4GYswg==}
     requiresBuild: true
     dev: false
 
